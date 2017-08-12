@@ -35,6 +35,15 @@ SOCIAL = (('twitter-square', 'http://twitter.com/Werberthgomes'),
           ('github', 'https://github.com/Werberth'),
           ('facebook', 'https://www.facebook.com/werberthg'))
 
+PLUGIN_PATHS = [
+    'pelican-plugins'
+]
+
+PLUGINS = [
+    'gravatar'
+]
+
+
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
