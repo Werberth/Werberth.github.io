@@ -6,6 +6,8 @@ AUTHOR = u'Werberth'
 SITENAME = u'Werberth'
 SITEURL = ''
 
+COVER_IMG_URL = SITEURL + u'images/banner.jpg'
+
 PATH = 'content'
 
 TIMEZONE = 'America/Sao_Paulo'
