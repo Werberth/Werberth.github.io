@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'Werberth'
-SITENAME = u'Werberth'
+AUTHOR = u'Werberth Vinícius'
+SITENAME = u'Werberth Vinicius'
+AUTHOR_EMAIL = u'werberthvinicius@gmail.com'
 SITEURL = ''
 
 COVER_IMG_URL = SITEURL + u'images/banner.jpg'
