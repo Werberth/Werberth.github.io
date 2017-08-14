@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Werberth Vinicius, ">
+
+        <link rel="alternate"  href="https://werberth.github.io/feeds/all.atom.xml" type="application/atom+xml" title="Werberth Vinicius Full Atom Feed"/>
+
+        <title>Plugando baterias externas: Aprenda a configurar o Sass no Django usando o Django-Compressor e Libsass // Werberth Vinicius </title>
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://werberth.github.io/theme/css/pure.css">
+    <link rel="stylesheet" href="https://werberth.github.io/theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar sidebar-article pure-u">
+        <header class="header-article">
+            <hgroup>
+                <a href="https://werberth.github.io/author/werberth-vinicius.html" title="See posts by Werberth Vinícius">
+                        <img class="avatar-perfil avatar" alt="Werberth Vinícius" src="https://www.gravatar.com/avatar/c9578a8c752234f14fc5800eec48b5aa">
+                </a>
+                <h2 class="article-info">Werberth Vinícius</h2>
+                    <small class="about-author">Pythonist, Django developer, Linux enthusiast and headbanger in the spare time.</small>
+                <ul class="author-social">
+                    <li>
+                        <a target="_blank" href="https://github.com/Werberth">
+                            <i class="fa fa-lg fa-fw fa-github"></i>
+                            <strong>Github</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://twitter.com/Werberthgomes">
+                            <i class="fa fa-lg fa-fw fa-twitter"></i>
+                            <strong>Twitter</strong>
+                        </a>
+                    </li>
+                </ul>
+                <h5>Publicado em:</h5>
+                <p>sáb 12 agosto 2017</p>
+                <a href="/">&larr; Home</a>
+            </hgroup>
+        </header>
+    </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Plugando baterias externas: Aprenda a configurar o Sass no Django usando o Django-Compressor e Libsass</h1>
+                        <p class="post-meta">
+                                <a class="post-category" href="https://werberth.github.io/tag/sass.html">sass</a>
+                                <a class="post-category" href="https://werberth.github.io/tag/css.html">css</a>
+                                <a class="post-category" href="https://werberth.github.io/tag/pre-processadores.html">pre-processadores</a>
+                                <a class="post-category" href="https://werberth.github.io/tag/django.html">django</a>
+                                <a class="post-category" href="https://werberth.github.io/tag/python.html">python</a>
+                                <a class="post-category" href="https://werberth.github.io/tag/django-compressor.html">django-compressor</a>
+                        </p>
+                </header>
+            </section>
+            <p>Quando se deseja desenvolver uma aplicação independente da deadline, sempre tentamos ao máximo aumentar nossa produtividade, utilizando bibliotecas que forneçam ferramentas úteis para o desenvolvimento de determinados componentes do projeto. O pré-processador <a href="http://sass-lang.com/">Sass</a> é um dessas ferramentas. Ele é o mais famosos, maduro e estavél pre-processador de CSS que existe, e que nos auxilia a escrever CSS mais rapidamente, reaproveitando codigo e seguindo o princípio do <a href="https://pt.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY (Don't Repeat Yourself)</a>, já bem conhecido por nós programadores Python. </p>
+<div class="highlight"><pre><span></span><span class="o">$</span><span class="nt">highlight-color</span><span class="o">:</span> <span class="p">#</span><span class="nn">6CF0AF</span><span class="o">;</span>
+<span class="o">$</span><span class="nt">hightligh-border</span><span class="o">:</span> <span class="nt">1px</span> <span class="o">$</span><span class="nt">hightlight-color</span> <span class="nt">solid</span><span class="o">;</span>
+
+<span class="p">#</span><span class="nn">content</span> <span class="p">{</span>
+    <span class="k">border</span><span class="p">:</span> <span class="err">$</span><span class="n">highlight-color</span><span class="o">:</span> <span class="mh">#6CF0AF</span><span class="p">;</span>
+    <span class="err">&amp;:hover</span> <span class="err">{</span> <span class="k">color</span><span class="p">:</span> <span class="mh">#161935</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="nt">article</span> <span class="p">{</span>
+        <span class="err">h1</span> <span class="err">{</span> <span class="k">color</span><span class="p">:</span> <span class="mh">#333</span> <span class="p">}</span>
+        <span class="nt">p</span> <span class="p">{</span> <span class="k">margin-bottom</span><span class="p">:</span> <span class="mf">1.4</span><span class="kt">em</span><span class="p">;</span> <span class="p">}</span>
+        <span class="o">&amp;</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span> <span class="p">}</span>
+    <span class="err">}</span>
+    <span class="nt">aside</span> <span class="p">{</span> <span class="k">background-color</span><span class="p">:</span> <span class="mh">#eee</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="p">#</span><span class="nn">container</span> <span class="p">{</span>
+        <span class="k">background-color</span><span class="p">:</span> <span class="err">$</span><span class="n">hightlight-color</span><span class="p">;</span>
+        <span class="err">p,</span> <span class="err">h3</span> <span class="err">{</span> <span class="k">color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span> <span class="p">}</span>
+    <span class="err">}</span>
+<span class="err">}</span>
+</pre></div>
+
+
+<p><small><center>Exemplo da sintaxe (arquivos <em>.scss</em>) utilizada pelo Sass.</center></small></p>
+<p>Apesar da sintaxe ser um pouco diferente (além de permitir a criação de váriaveis, herança, imports, entre outras coisas), o Sass irá "compilar" seus arquivos <em>.scss</em> (ou <em>.sass</em>), gerando os arquivos <em>.css</em> que serão (finalmente) renderizados pelo navegador, ou seja, no final, tudo se torna CSS.</p>
+<p>Ai você me pergunta, "Como eu faço pra utilizar o Sass na minha aplicação Django?", bem, não é nenhum "bixo de sete cabeças", e em poucos passos, já vai ta tudo configurado.</p>
+<h4>Utilizando Django Compressor</h4>
+<p>Django Compressor é um modulo python que tem como principal objetivo, comprimir arquivos JavaScript e CSS em um unico arquivo  cacheável.</p>
+<p><img alt="Django Compressor Diagrama" src="https://github.com/Werberth/Werberth.github.io/raw/pelican/content/images/posts/django_compressing.png" title="Django Compressor Diagrama">
+<small><center>Diagrama do processo de compressão dos arquivos estáticos pelo Django Compressor - Creditos para <a href="http://aptuz.com/blog/">aptuz.com</a></center></small></p>
+<p>Para instala-lo, utilizaremos o pip, inserindo o seguinte comando no terminal (ou cmd):</p>
+<div class="highlight"><pre><span></span>$   pip install django-compressor
+</pre></div>
+
+
+<p>Após o termino da instalação, devemos adicionar o módulo a variável <em>INSTALLED_APPS</em> no arquivo settings.py do nosso projeto:</p>
+<div class="highlight"><pre><span></span><span class="c1">#settings.py</span>
+<span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
+    <span class="o">...</span>
+    <span class="s1">&#39;compressor&#39;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+
+
+<p>Agora, precisamos definir a variável <a href="https://docs.djangoproject.com/en/1.11/ref/settings/#std:setting-STATICFILES_FINDERS"><em>STATICFILES_FINDERS</em></a> (que é nada mais, nada menos, que uma lista com buscadores, que localizam os arquivos estáticos da nossa aplicação django), adicionando nela os buscadores padrões, e também a classe de busca do Django-Compressor:</p>
+<div class="highlight"><pre><span></span><span class="c1"># settings.py</span>
+<span class="n">STATICFILES_FINDERS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s1">&#39;django.contrib.staticfiles.finders.FileSystemFinder&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;django.contrib.staticfiles.finders.AppDirectoriesFinder&#39;</span><span class="p">,</span>
+    <span class="o">...</span>
+    <span class="s1">&#39;compressor.finders.CompressorFinder&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+
+
+<p>Pra finalizar a finalizar a primeira parte da configuração, precisamos envolver nossos arquivos CSS e JS pela tag <em>{% compress <strong>tipo_do_arquivo</strong> %}</em>: </p>
+<div class="highlight"><pre><span></span>    {% compress css %}
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{% static &#39;css/style1.css&#39; %}&quot;</span><span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{% static &#39;css/buttons.scss&#39; %}&quot;</span><span class="p">&gt;</span>
+    {% endcompress %}
+
+    ...
+
+    {% compress js %}
+        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{% static &#39;js/jquery/jquery-2.2.1.min.js&#39; %}&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{% static &#39;/js/init_components.js&#39; %}&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    {% endcompress %}
+</pre></div>
+
+
+<h4><a href="https://github.com/dahlia/libsass-python">Libsass</a> - Pré Compilador</h4>
+<p>O Sass é inscrito em Ruby, porém, podemos utilizar alguns mecanismos para compilar nossos arquivos <em>.scss</em> (ou <em>.sass</em>) automaticamente, ao rodar o servidor (comando <em>python manage.py runserver</em>). Para isso precisamos instalar o biblioteca que irá auxiliar o Django Compressor nessa tarefa, seu nome é <em>Libsass</em> e sua instalação pode ser feita através do seguinte comando:</p>
+<div class="highlight"><pre><span></span>$   pip install libsass
+</pre></div>
+
+
+<p>Utilizaremos o Django Compressor já instalado e configurado, para executar o pré compilador, para isso devemos adicionar a seguinte variável ao settings.py da nossa aplicação:</p>
+<div class="highlight"><pre><span></span><span class="c1"># settings.py</span>
+<span class="n">COMPRESS_PRECOMPILERS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s1">&#39;text/x-sass&#39;</span><span class="p">,</span> <span class="s1">&#39;sassc {infile} {outfile}&#39;</span><span class="p">),</span>
+<span class="p">)</span> 
+</pre></div>
+
+
+<p><small><center>O binário <em>sassc</em> foi instalado a partir do libsass, o parametro <em>{inframe}</em> se refere ao arquivo de entradas <em>.scss</em> (ou <em>.sass</em>), e o parametro <em>{outfile}</em> refere-se ao arquivo de saído, já compilado como arquivo <em>.css</em>.</center></small></p>
+<p>Agora que tudo já está configurado, basta definirmos todos os nossos arquivos de estilização escritos com sass, com o atributo <em>type</em> igual a <em>text/x-sass</em>:</p>
+<div class="highlight"><pre><span></span>{% compress css %}
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{% static &#39;css/base.css&#39; %}&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{% static &#39;scss/container.scss&#39; %}&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/x-sass&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{% static &#39;scss/side_bar.scss&#39; %}&quot;</span><span class="err">&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/x-sass&quot;</span><span class="p">&gt;</span>
+{% endcompress %} 
+</pre></div>
+
+
+<p>Pronto, sass configurado com sucesso, agora toda vez que o comando <em>python manage.py runserver</em> for executado, os arquivos sass serão pré compilados, cacheados em um só arquivo, e executados com um arquivo css normal.</p>
+<h3>Conclusão</h3>
+<p>Utilizando somente dois pequenos modulos, fomos capazes de plugar o Sass a nossa aplicação Django (sem a utilização de outra linguagem de programação), e assim podemos desfrutar dessa ferramenta tão poderosa.</p>
+<p>Até o próximo tutorial pessoal! o/</p>
+            <div class="hr"></div>
+            <a href="#" class="go-top">Go Top</a>
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = "werberthvinicius"; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div><footer class="footer">
+    <p>&copy; Werberth Vinicius &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+</div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>
