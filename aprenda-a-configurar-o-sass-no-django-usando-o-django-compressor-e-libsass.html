@@ -36,7 +36,7 @@
                     <small class="about-author">Pythonist, Django developer, Linux enthusiast and headbanger in the spare time.</small>
                 <ul class="author-social">
                     <li>
-                        <a target="_blank" href="https://github.com/Werberth">
+                        <a target="_blank" href="https://github.com/werberth">
                             <i class="fa fa-lg fa-fw fa-github"></i>
                             <strong>Github</strong>
                         </a>
@@ -69,7 +69,7 @@
                         </p>
                 </header>
             </section>
-            <p>Quando desejamos desenvolver uma aplicação independente da deadline, sempre tentamos ao máximo aumentar nossa produtividade, utilizando bibliotecas que forneçam ferramentas úteis para o desenvolvimento de determinados componentes do projeto. O pré-processador <a href="http://sass-lang.com/">Sass</a> é um dessas ferramentas. Ele é o mais famosos, maduro e estavél pre-processador de CSS que existe, e que nos auxilia a escrever CSS mais rapidamente, reaproveitando codigo e seguindo o princípio do <a href="https://pt.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY (Don't Repeat Yourself)</a>, já bem conhecido por nós programadores Python. </p>
+            <p>Quando desejamos desenvolver uma aplicação independente da deadline, sempre tentamos ao máximo aumentar nossa produtividade, utilizando bibliotecas que forneçam ferramentas úteis para o desenvolvimento de determinados componentes do projeto. O pré-processador <a href="http://sass-lang.com/">Sass</a> é uma dessas ferramentas. Ele é o mais famoso, maduro e estavél pre-processador de CSS que existe, e que nos auxilia a escrever CSS mais rapidamente, reaproveitando codigo e seguindo o princípio do <a href="https://pt.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY (Don't Repeat Yourself)</a>, já bem conhecido por nós programadores Python. </p>
 <div class="highlight"><pre><span></span><span class="o">$</span><span class="nt">highlight-color</span><span class="o">:</span> <span class="p">#</span><span class="nn">6CF0AF</span><span class="o">;</span>
 <span class="o">$</span><span class="nt">hightligh-border</span><span class="o">:</span> <span class="nt">1px</span> <span class="o">$</span><span class="nt">hightlight-color</span> <span class="nt">solid</span><span class="o">;</span>
 
@@ -94,7 +94,7 @@
 
 <p><small><center>Exemplo da sintaxe (arquivos <em>.scss</em>) utilizada pelo Sass.</center></small></p>
 <p>Apesar da sintaxe ser um pouco diferente (além de permitir a criação de váriaveis, herança, imports, entre outras coisas), o Sass irá "compilar" seus arquivos <em>.scss</em> (ou <em>.sass</em>), gerando os arquivos <em>.css</em> que serão (finalmente) renderizados pelo navegador, ou seja, no final, tudo se torna CSS.</p>
-<p>Ai você me pergunta, "Como eu faço pra utilizar o Sass na minha aplicação Django?", bem, não é nenhum "bixo de sete cabeças", e em poucos passos, já vai ta tudo configurado.</p>
+<p>Ai você me pergunta, "Como eu faço pra utilizar o Sass na minha aplicação Django?". Bem, não é nenhum BICHO DE SETE CABEÇAS, com apenas alguns minutinhos em frente ao computador, você consegue configurar tudo, sem ter problemas.</p>
 <h4>Utilizando Django Compressor</h4>
 <p>Django Compressor é um modulo python que tem como principal objetivo, comprimir arquivos JavaScript e CSS em um unico arquivo  cacheável.</p>
 <p><img alt="Django Compressor Diagrama" src="https://github.com/Werberth/Werberth.github.io/raw/pelican/content/images/posts/django_compressing.png" title="Django Compressor Diagrama">
@@ -129,7 +129,7 @@
 </pre></div>
 
 
-<p>Pra finalizar a finalizar a primeira parte da configuração, precisamos envolver nossos arquivos CSS e JS pela tag <em>{% compress <strong>tipo_do_arquivo</strong> %}</em>: </p>
+<p>E para finalizar a primeira parte de configuração do compressor, precisamos envolver nossos arquivos CSS e JS pela tag <em>{% compress <strong>tipo_do_arquivo</strong> %}</em>: </p>
 <div class="highlight"><pre><span></span>    {% compress css %}
         <span class="p">&lt;</span><span class="nt">link</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{% static &#39;css/style1.css&#39; %}&quot;</span><span class="p">/&gt;</span>
         <span class="p">&lt;</span><span class="nt">link</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{% static &#39;css/buttons.scss&#39; %}&quot;</span><span class="p">&gt;</span>
@@ -150,7 +150,7 @@
 </pre></div>
 
 
-<p>Utilizaremos o Django Compressor já instalado e configurado, para executar o pré compilador, para isso devemos adicionar a seguinte variável ao settings.py da nossa aplicação:</p>
+<p>Utilizaremos o Django Compressor já instalado e configurado, para executar o pré compilador. Pra isso, iremos adicionar a seguinte variável ao settings.py da nossa aplicação:</p>
 <div class="highlight"><pre><span></span><span class="c1"># settings.py</span>
 <span class="n">COMPRESS_PRECOMPILERS</span> <span class="o">=</span> <span class="p">(</span>
     <span class="p">(</span><span class="s1">&#39;text/x-sass&#39;</span><span class="p">,</span> <span class="s1">&#39;sassc {infile} {outfile}&#39;</span><span class="p">),</span>
@@ -158,8 +158,8 @@
 </pre></div>
 
 
-<p><small><center>O binário <em>sassc</em> foi instalado a partir do libsass, o parametro <em>{inframe}</em> se refere ao arquivo de entradas <em>.scss</em> (ou <em>.sass</em>), e o parametro <em>{outfile}</em> refere-se ao arquivo de saído, já compilado como arquivo <em>.css</em>.</center></small></p>
-<p>Agora que tudo já está configurado, basta definirmos todos os nossos arquivos de estilização escritos com sass, com o atributo <em>type</em> igual a <em>text/x-sass</em>:</p>
+<p><small><center>O binário <em>sassc</em> foi instalado a partir do libsass, o parametro <em>{inframe}</em> se refere ao arquivo de entradas <em>.scss</em> (ou <em>.sass</em>), e o parametro <em>{outfile}</em> refere-se ao arquivo de saída, já compilado como arquivo <em>.css</em>.</center></small></p>
+<p>Agora que tudo já está configurado, basta definirmos todos os nossos arquivos de estilização escritos usando Sass, com o atributo <em>type</em> igual a <em>text/x-sass</em>:</p>
 <div class="highlight"><pre><span></span>{% compress css %}
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{% static &#39;css/base.css&#39; %}&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{% static &#39;scss/container.scss&#39; %}&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/x-sass&quot;</span><span class="p">&gt;</span>
@@ -168,7 +168,7 @@
 </pre></div>
 
 
-<p>Pronto, sass configurado com sucesso, agora toda vez que o comando <em>python manage.py runserver</em> for executado, os arquivos sass serão pré compilados, cacheados em um só arquivo, e executados com um arquivo css normal.</p>
+<p>Pronto, sass configurado com sucesso, agora toda vez que o comando <em>python manage.py runserver</em> for executado, os arquivos Sass serão pré compilados, cacheados em um só arquivo, e executados como um arquivo css normal. Muito fácil, não é?</p>
 <h3>Conclusão</h3>
 <p>Utilizando somente dois pequenos modulos, fomos capazes de plugar o Sass a nossa aplicação Django (sem a utilização de outra linguagem de programação), e assim podemos desfrutar dessa ferramenta tão poderosa.</p>
 <p>Até o próximo tutorial pessoal! o/</p>
@@ -220,6 +220,16 @@
         $('body').on('click', 'a[href="#"]', function(event) {
             event.preventDefault();
         });
+    </script>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-104570304-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
     </script>
 </body>
 </html>
