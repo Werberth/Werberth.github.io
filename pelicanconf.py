@@ -42,8 +42,11 @@ PLUGIN_PATHS = [
 
 PLUGINS = [
     'gravatar',
-    'sitemap'
+    'sitemap',
+    'disqus_static'
 ]
+
+DISQUS_SITENAME = 'werberthvinicius'
 
 
 DEFAULT_PAGINATION = 10
