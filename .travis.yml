@@ -1,0 +1,20 @@
+branches:
+  only:
+  - pelican
+language: python
+python:
+- 2.7
+install:
+- pip install -r requirements.txt
+script:
+- make publish
+notifications:
+  email:
+    on_success: never
+    on_failure: never
+before_install:
+- git submodule update --init --recursive
+after_success: bash deploy.sh
+env:
+  global:
+    secure: Vavimc0zBqei4zlHEclQEiyRKnCk4Pc9rslHtE4ET31fJOtrwZbCgien8kEieGR0/KIzfDQMcpYiNqw2GJXsWUkuavGH5fbKxng8KFgqNWrjaFZHEheE/bIScTki1xA2neHKgi4Da9NAssTueOAgJInMTB1Wsed7w5jmpi60jE8BT7mB87swz5u8K64HW4F9DMEsW7Vbb3IbwnseKqAyW/os8/iwxEyFawcevmXEyvOleR/Glbalf4GKdofjCNYY6OWtCr/TSm1A5kXL0cOSfazgs6FmWKP63jJuc9+yjqp/Tfzn0R6FwFs3Y8cPGzGpAO9zyCyUFB4bh0hCdjEV4AH9N0KGZ5LGVuEpVoi/YjEET26I8UzmywgmvVLxGykK/x30Rfaz2Q0+e8cnvtMrqSvUSBncHkHTBIAua4DyWXmOzou/V9SL+wYa6UUdks46m6zedODoHIRMPZEeLLwXmB7EctnWifxasXrzLEQDa5kbkNorZB62T9VWdo4ZINwRugskV6wUb930I34fQKEbKg7lnFaudPx0CIA7ywu3tOLSF6VhzKeH+GgJp2v+4jjMpF47xWiaTbG0j3MWet4WTOiyNxHURLzjqFdEoxdc/EJpBkfNjcuFJ91wK0gNZkM1UKWI+pPUBQcUpTgH9SMSifj17ukt69SVNg5Bk6/LgqE=
