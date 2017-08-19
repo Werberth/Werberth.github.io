@@ -5,9 +5,10 @@ from __future__ import unicode_literals
 AUTHOR = u'Werberth Vinícius'
 SITENAME = u'Werberth Vinicius'
 AUTHOR_EMAIL = u'werberthvinicius@gmail.com'
-SITEURL = ''
+SITEURL = 'https://werberth.github.io'
 
-COVER_IMG_URL = SITEURL + u'images/banner.jpg'
+SIDE_BAR_IMG = 'images/banner.jpg'
+COVER_IMG_URL = SITEURL + '/' + SIDE_BAR_IMG
 
 PATH = 'content'
 
