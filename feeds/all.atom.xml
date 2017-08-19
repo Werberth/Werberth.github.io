@@ -27,7 +27,7 @@
 &lt;p&gt;Ai você me pergunta, "Como eu faço pra utilizar o Sass na minha aplicação Django?". Bem, não é nenhum BICHO DE SETE CABEÇAS, com apenas alguns minutinhos em frente ao computador, você consegue configurar tudo, sem ter problemas.&lt;/p&gt;
 &lt;h4&gt;Utilizando Django Compressor&lt;/h4&gt;
 &lt;p&gt;Django Compressor é um modulo python que tem como principal objetivo, comprimir arquivos JavaScript e CSS em um unico arquivo  cacheável.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Django Compressor Diagrama" src="https://github.com/Werberth/Werberth.github.io/raw/pelican/content/images/posts/django_compressing.png" title="Django Compressor Diagrama"&gt;
+&lt;p&gt;&lt;img alt="Django Compressor Diagrama" src="https://werberth.github.io/images/posts/django_compressing.png&amp;quot;" title="Django Compressor Diagrama&amp;quot;"&gt;
 &lt;small&gt;&lt;center&gt;Diagrama do processo de compressão dos arquivos estáticos pelo Django Compressor - Creditos para &lt;a href="http://aptuz.com/blog/"&gt;aptuz.com&lt;/a&gt;&lt;/center&gt;&lt;/small&gt;&lt;/p&gt;
 &lt;p&gt;Para instala-lo, utilizaremos o pip, inserindo o seguinte comando no terminal (ou cmd):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$   pip install django-compressor
