@@ -52,6 +52,8 @@ DISQUS_SITENAME = 'werberthvinicius'
 
 DEFAULT_PAGINATION = 10
 
+GOOGLE_ANALYTICS = 'UA-104570304-1'
+
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
